@@ -38,6 +38,11 @@ public class HomeController {
 		model.addAttribute("info", apiService.getGrandCircusInfo());
 		return "gcInfo";
 	}
-
+	
+	@RequestMapping("blog")
+	private String getBlog(Model model) {
+		model.addAttribute("blog", apiService.getBlogInfo());
+		return "blog";
+	}
 	
 }

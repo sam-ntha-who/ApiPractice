@@ -6,14 +6,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index</title>
+<title>Blog</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
-<p><a href="/planetInfo">PlanetAPI</a></p>
-<p><a href="/CSHallofFame">ComputerScienceHallOfFameAPI</a></p>
-<p><a href="/gcInfo">GrandCircusInfoAPI</a></p>
-<p><a href="/blog">BlogAPI</a></p>
+<h1>${blog.title}</h1>
+<h2>${blog.language}</h2>
+<br>
+<c:forEach var="post" items="${blog.posts}">
+<h3>${post.title} by ${post.author}</h3>
+<h5>${post.date}</h5>
+<p>${post.content}</p>
+<p>${post.tags}
+</c:forEach>
 
 </body>
 </html>

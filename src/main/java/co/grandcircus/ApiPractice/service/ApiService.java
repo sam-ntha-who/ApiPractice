@@ -5,6 +5,7 @@ package co.grandcircus.ApiPractice.service;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import co.grandcircus.ApiPractice.models.BlogModels.BlogResponse;
 import co.grandcircus.ApiPractice.models.CSModels.CSResponse;
 import co.grandcircus.ApiPractice.models.GCInfoModels.GCResponse;
 import co.grandcircus.ApiPractice.models.PlanetModels.PlanetResponse;
@@ -29,6 +30,12 @@ public class ApiService {
 	public GCResponse getGrandCircusInfo() {
 		String url = "https://grandcircusco.github.io/demo-apis/grand-circus.json";
 		GCResponse response = request.getForObject(url, GCResponse.class);
+		return response;
+	}
+	
+	public BlogResponse getBlogInfo() {
+		String url = "https://grandcircusco.github.io/demo-apis/blog-posts.json";
+		BlogResponse response = request.getForObject(url, BlogResponse.class);
 		return response;
 	}
 	
