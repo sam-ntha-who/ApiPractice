@@ -11,7 +11,7 @@
 </head>
 <body>
 <h1>${blog.title}</h1>
-<h2>${blog.language}</h2>
+<h2>Language: ${blog.language}</h2>
 <br>
 <c:forEach var="post" items="${blog.posts}">
 <h3>${post.title} by ${post.author}</h3>
