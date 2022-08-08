@@ -10,13 +10,14 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
+<a href="/">Back</a>
 <h1>${recipes.title}</h1>
 <c:forEach var="recipe" items="${recipes.recipes}">
 <h2>${recipe.name}</h2>
 <h3>by ${recipe.contributor} </h3>
 <h4>Ingredients:</h4>
 <c:forEach var="ingredient" items="${recipe.ingredients}">
-<p>${ingredient}</p>
+<ul><li>${ingredient}</li></ul>
 </c:forEach>
 <h4>Directions:</h4>
 <p>${recipe.directions}</p>
