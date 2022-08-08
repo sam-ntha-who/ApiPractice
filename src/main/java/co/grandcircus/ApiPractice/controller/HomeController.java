@@ -26,12 +26,17 @@ public class HomeController {
 		return "planetInfo";
 	
 	}
-
 	
 	@RequestMapping("CSHallofFame")
 	private String getHallofFame(Model model) {
 		model.addAttribute("scientist", apiService.getCSHallofFame());
 		return "CSHallofFame";
+	}
+	
+	@RequestMapping("gcInfo") 
+	private String getGCInfor(Model model) {
+		model.addAttribute("info", apiService.getGrandCircusInfo());
+		return "gcInfo";
 	}
 
 	

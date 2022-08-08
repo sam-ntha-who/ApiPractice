@@ -7,10 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Index</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
-<a href="/planetInfo">PlanetAPI</a>
-<a href="/CSHallofFame">ComputerScienceHallOfFameAPI</a>
+<p><a href="/planetInfo">PlanetAPI</a></p>
+<p><a href="/CSHallofFame">ComputerScienceHallOfFameAPI</a></p>
+<p><a href="/gcInfo">GrandCircusInfoAPI</a></p>
 
 </body>
 </html>

@@ -6,32 +6,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CS Hall of Fame</title>
+<title>Grand Circus Info</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
-<h1>Computer Science Hall of Fame</h1>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Year</th>
-<th>Innovation</th>
-</tr>
-<c:forEach var="scientist" items="${scientist.complete}">
-<tr>
-<td>${scientist.firstName} ${scientist.lastName}</td>
-<td>${scientist.year}</td>
-<td>${scientist.innovation}</td>
-
-
-</tr>
-
-
+<h1>Grand Circus Info</h1>
+<p>Organization: ${info.organization}</p>
+<p>Rooms: 
+<c:forEach var="rooms" items="${info.rooms}">
+${rooms.name} Level: ${rooms.level}, 
 </c:forEach>
-
-</thead>
-</table>
-
+<p>CEO: ${info.ceo.firstName} ${info.ceo.lastName}</p>
+<p>Languages:  
+<c:forEach var="languages" items="${info.languages}">
+${languages.name} - creator: ${languages.creator.firstName} ${languages.creator.lastName};   
+</c:forEach></p>
 </body>
 </html>
