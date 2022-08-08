@@ -45,4 +45,10 @@ public class HomeController {
 		return "blog";
 	}
 	
+	@RequestMapping("recipes")
+	private String showRecipes(Model model) {
+		model.addAttribute("recipes", apiService.getRecipes());
+		return "recipes";
+	}
+	
 }

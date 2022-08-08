@@ -9,6 +9,7 @@ import co.grandcircus.ApiPractice.models.BlogModels.BlogResponse;
 import co.grandcircus.ApiPractice.models.CSModels.CSResponse;
 import co.grandcircus.ApiPractice.models.GCInfoModels.GCResponse;
 import co.grandcircus.ApiPractice.models.PlanetModels.PlanetResponse;
+import co.grandcircus.ApiPractice.models.RecipeModels.RecipeResponse;
 
 @Service
 public class ApiService {
@@ -36,6 +37,12 @@ public class ApiService {
 	public BlogResponse getBlogInfo() {
 		String url = "https://grandcircusco.github.io/demo-apis/blog-posts.json";
 		BlogResponse response = request.getForObject(url, BlogResponse.class);
+		return response;
+	}
+	
+	public RecipeResponse getRecipes() {
+		String url = "https://grandcircusco.github.io/demo-apis/recipes.json";
+		RecipeResponse response = request.getForObject(url, RecipeResponse.class);
 		return response;
 	}
 	
